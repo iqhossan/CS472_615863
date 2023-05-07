@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>practice</title>
+        <meta charset="utf-8">
+        <!-- <link href="./style.css" type="text/css" rel="stylesheet"> -->
+    <style>
+    
+    </style>
+    </head>
+    <body>
+        <table border ="1" width="80%">
+            <tr><td align="center"><b>Questions</b></td><td align="center"><b>Result</b></td></tr>
+            
+            <tr><td>1. Define a function max() that takes two numbers as arguments and returns the largest of them. 
+                Use the if-thenelse construct available in Javascript.<br/><br/>
+                function max(x , y){
+                    if(x>y) return x;
+                    else return y;
+                }
+               <br/> max(141,32);
+            </td>
+                <td width="10%"><p id="demo1"></p></td>
+            </tr>
+
+
+            <tr><td>2. Define a function maxOfThree() that takes three numbers as arguments and 
+                returns the largest of them.<br/><br/>
+                function maxOfThree(x,y,z){
+                    let max;
+                    if(x>y)  max = x;
+                    else max = y;
+                
+                    if (max>z) return max;
+                    else return z;
+                 }
+               <br/> maxOfThree(141,323,932);
+            </td>
+                <td width="10%"><p id="demo2"></p></td>
+            </tr>
+
+
+            <tr><td>3. Write a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false
+                otherwise.<br/><br/>
+                function isVowel(char){
+                    let vowel = ["a","e","i","o","u"];
+                    return vowel.includes(char.toLowerCase());
+                }
+               <br/> isVowel("U");
+            </td>
+                <td width="10%"><p id="demo3"></p></td>
+            </tr>
+
+            <tr><td>4. Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an
+                input array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
+                Note/Hint: Do these using Imperative programming approach (i.e. for…loop or while…loop).<br/>
+                function sum(items){ <br/><br/>
+                    let sum = 0;
+                    for(let item of items){
+                        sum +=item;
+                    }  
+                    return sum;
+                }
+                <br/>sum([1,2,3,4]);
+                
+                <br/>function multiply(items){ <br/>
+                    let sum = 1; 
+                    let i = 0;
+                    do{
+                        sum *= items[i];
+                        i++;
+                    }while(i < items.length); 
+                    return sum;
+                }
+                
+               <br/>multiply([1,2,3,4]); 
+            </td>
+                <td width="10%"><p id="demo4"></p></td>
+            </tr>
+
+
+            <tr><td>5. Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should
+                return the string "ratset gaj".<br/><br/>
+                
+                function reverse(str){ 
+                    let rev = ""; 
+                    for(let i =str.length-1; i>-1;i--){
+                        rev += str[i]; 
+                    }
+                   return rev;
+                }
+                
+               <br/>let str = "jag testar"; 
+               <br/>reverse(str); 
+            </td>
+                <td width="10%"><p id="demo5"></p></td>
+            </tr>
+
+            <tr><td>6. Write a function findLongestWord() that takes an array of words 
+                and returns the length of the longest one.<br/><br/>
+                
+                function findLongestWord(words){
+                    let max = 0;
+                    for(let word of words){
+                        if(word.length>max){
+                            max = word.length;
+                        } 
+                    }
+                    return max;
+                }
+                
+                let words = ["hello", "world", "find Longest Word", "programming"]; 
+               <br/>findLongestWord(words); 
+            </td>
+                <td width="10%"><p id="demo6"></p></td>
+            </tr>
+
+            <tr><td>7. Write a function filterLongWords() that takes an array of words and an integer i and returns a new array
+                containing only those words that were longer than i characters.<br/><br/>
+                function filterLongWords(data,i){
+                     return data.filter(element => element.length>i);
+                }
+                <br/>words = ["hello", "world", "find Longest Word", "programming"];
+                <br/>let result = filterLongWords(words,5); 
+               <br/>filterLongWords(words,5);
+            </td>
+                <td width="10%"><p id="demo7"></p></td>
+            </tr>
+
+            <tr><td>8. Write a function named, computeSumOfSquares, that takes as input, an array of numbers and calculates and
+                returns the sum of the squares of each number in the input array. 
+                E.g. computeSumOfSquares([1,2,3]) should be
+                computed as 12 + 22 +32 = 14. Note: Write your Javascript code without using Imperative programming. i.e. Do
+                NOT use any explicit looping construct; instead use functional programming style/approach.<br/><br/>
+                
+                function computeSumOfSquares(numbers){
+                    return numbers.reduce((a,b)=>a + b ** 2,0);
+                }
+               <br/>computeSumOfSquares([1,2,3]);
+            </td>
+                <td width="10%"><p id="demo8"></p></td>
+            </tr>
+
+            <tr><td>9. Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers and it finds
+                and prints only the numbers which are odd.<br/><br/>
+                
+                function printOddNumbersOnly(numbers){
+                return numbers.filter(element=>element%2 != 0);
+                }
+               <br/>printOddNumbersOnly([1,2,3,4]);
+            </td>
+                <td width="10%"><p id="demo9"></p></td>
+            </tr>
+
+
+            <tr><td>10. Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, an array of integral numbers
+                and calculates and returns the sum of the squares of only the even numbers in the input array. E.g.
+                computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 = 20.<br/><br/>
+                
+                function computeSumOfSquaresOfEvensOnly(numbers){
+                    return numbers.filter(element=>element%2==0).reduce((a,b)=>a+b**2,0);
+                } 
+               <br/>computeSumOfSquaresOfEvensOnly([1,2,3,4,5]);
+            </td>
+                <td width="10%"><p id="demo10"></p></td>
+            </tr>
+
+
+
+            <tr><td>11. Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…) (defined in Problem 4 above) without using Imperative programming. 
+                i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach.<br/><br/>
+                
+                function sumByReduce(items){
+                    return items.reduce((a,b)=>a+b,0);
+                }
+                console.log("11. Result:" + sumByReduce([1,2,3,4]));
+                
+                function multiplyByReduce(items){ 
+                    return items.reduce((a,b)=>a*b,1); 
+                } 
+               <br/>multiplyByReduce([1,2,3,4]);
+            </td>
+                <td width="10%"><p id="demo11"></p></td>
+            </tr>
+
+
+
+            <tr><td>12. Write a function named printFibo, that takes as input, a given length, n, and any two starting numbers a and b, and it prints-out 
+                the Fibonacci sequence, e.g. (0, 1, 1, 2, 3, 5, 8, 13, 21, 34,…) of the given length, beginning with a and b. (e.g. printFibo(n=1, a=0, b=1), 
+                prints-out: "0", as output; printFibo(n=2, a=0, b=1), prints-out: "0, 1", as output; printFibo(n=3, a=0, b=1), 
+                prints-out: "0, 1, 1", as output; printFibo(n=6, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5", 
+                as output; and printFibo(n=10, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", as output).<br/><br/>
+                
+                function printFibo(n,a,b){
+                    let arr = [];
+                    arr[0] = a;
+                    arr[1] = b; 
+                    if(n==1) return arr[0].toString();
+                    else if(n==2) return arr.toString();
+                    else{
+                        for(let i=2; i < n; i++) { 
+                            arr[i] = arr[i-1] + arr[i-2]; 
+                        }
+                    }
+                    return arr.toString();
+                }
+                 
+               <br/> printFibo(n=10, a=0, b=1);
+            </td>
+                <td width="10%"><p id="demo12"></p></td>
+            </tr>
+
+        </table>
+         
+
+         
+             
+      <script src="./js/lab5.js"></script>
+    </body>
+</html>
