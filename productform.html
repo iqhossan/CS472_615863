@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+      .vr {
+          display: inline-block;
+          align-self: stretch;
+          width: 2px;
+          min-height: 2em;
+          background-color: #fff;
+          opacity: .30;
+      }
+    </style>
+</head>
+<body>
+     
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6db1f9;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MUM Golden Market ::: SRM System </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent"  aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-12">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">&nbsp;</a>
+              </li>
+              <div class="vr"></div>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">&nbsp;</a>
+              </li>
+              <div class="vr"></div>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Supplier</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">&nbsp;</a>
+              </li>
+              
+            </ul>
+            <div class="form-group">
+              <b><font color="white">Hello!</font></b>&nbsp;&nbsp;
+            </div>
+            <button type="button" class="btn btn-light">Sign Out</button> 
+ 
+          </div>
+        </div>
+      </nav>
+
+      <section>
+
+       
+
+          <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-9 col-11 text-left">
+                    <form class="row g-3">
+                        <div class="card-header">
+                          <div class="card-title">
+                            <h2>New Product Form</h2>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputProductNumber" class="form-label">Product Number</label>
+                          <input type="text" class="form-control" id="inputProductNumber">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputStock" class="form-label">Quantity in Stock</label>
+                          <input type="text" class="form-control" id="inputStock1" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="inputName" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputSupplier" class="form-label">Supplier</label>
+                          <select id="inputSupplier" class="form-select">
+                            <option selected>Select a Supplier</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                         
+                        
+                        <div class="col-md-6">
+                          <label for="inputPrice" class="form-label">Unit Price</label>
+                          <input type="text" class="form-control" id="inputPrice" value="0.0">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputDate" class="form-label">Date Supplied</label>
+                          <input type="text" class="form-control" id="inputDate" placeholder="yyyy-mm-dd" value="">
+                          <label for="inputValidDate" class="form-label">Enter a valid Date</label>
+                        </div>
+                        
+                        <div class="col-md-8"></div>
+                        <div class="col-md-1">  
+                          <button type="button" class="btn btn-outline-secondary float-end">Reset</button>   
+                        </div>    
+                        <div class="col-md-1">   
+                             <button type="button" class="btn btn-outline-danger float-end">Cancel</button>  
+                        </div>  
+                         <div class="col-md-2 float-end">  
+                           <button type="button" class="btn btn-outline-primary float-end">Add&nbsp;Product</button> 
+                       </div> 
+                      </form>
+
+                </div>
+            </div>
+          </div>
+      </section>
+      <script src="./js/bootstrap.bundle.min.js" 
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
